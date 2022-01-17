@@ -3,6 +3,15 @@ name = "py_hello_rust"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "py_hello_rust"
+crate-type = ["cdylib"]
+
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dependencies.pyo3]
+version = "0.15.1"
+features = ["extension-module"]
